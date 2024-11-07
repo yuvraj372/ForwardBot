@@ -14,7 +14,7 @@ class Config:
     DATABASE_NAME = environ.get("DATABASE_NAME", "Forwardbot")
     BOT_OWNER_ID = [int(id) for id in environ.get("BOT_OWNER_ID", '6471106079').split()]
     LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002399867259'))
-    FORCE_SUB_CHANNEL = environ.get("FORCE_SUB_CHANNEL", "-1002304371242") 
+    FORCE_SUB_CHANNEL = environ.get("FORCE_SUB_CHANNEL", "https://t.me/forward_force_sub") 
     FORCE_SUB_ON = environ.get("FORCE_SUB_ON", "True")
     PORT = environ.get('PORT', '8000')
     
