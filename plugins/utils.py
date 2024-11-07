@@ -8,6 +8,10 @@ class STS:
     def __init__(self, id):
         self.id = id
         self.data = STATUS
+        
+#Dont Remove My Credit @Silicon_Bot_Update 
+#This Repo Is By @Silicon_Official 
+# For Any Kind Of Error Ask Us In Support Group @Silicon_Botz 
     
     def verify(self):
         return self.data.get(self.id)
@@ -48,4 +52,6 @@ class STS:
             size = [configs['file_size'], configs['size_limit']]
         return bot, configs['caption'], configs['forward_tag'], {'chat_id': k.FROM, 'limit': k.limit, 'offset': k.skip, 'filters': filters,
                 'keywords': configs['keywords'], 'media_size': size, 'extensions': configs['extension'], 'skip_duplicate': duplicate}, configs['protect'], button
-        
+ #Dont Remove My Credit @Silicon_Bot_Update 
+#This Repo Is By @Silicon_Official 
+# For Any Kind Of Error Ask Us In Support Group @Silicon_Botz        

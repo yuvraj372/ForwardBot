@@ -1,28 +1,36 @@
+#Dont Remove My Credit @Silicon_Bot_Update 
+#This Repo Is By @Silicon_Official 
+# For Any Kind Of Error Ask Us In Support Group @Silicon_Botz 
+
 import re
 import asyncio 
 from .utils import STS
 from database import db
 from config import temp 
 from translation import Translation
-from pyrogram import Client, filters 
+from pyrogram import Client, filters, enums
 from pyrogram.errors import FloodWait 
 from pyrogram.errors.exceptions.not_acceptable_406 import ChannelPrivate as PrivateChat
 from pyrogram.errors.exceptions.bad_request_400 import ChannelInvalid, ChatAdminRequired, UsernameInvalid, UsernameNotModified, ChannelPrivate
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery, KeyboardButton, ReplyKeyboardMarkup, ReplyKeyboardRemove
  
+ #Dont Remove My Credit @Silicon_Bot_Update 
+#This Repo Is By @Silicon_Official 
+# For Any Kind Of Error Ask Us In Support Group @Silicon_Botz 
+ 
 #===================Run Function===================#
 
-@Client.on_message(filters.private & filters.command(["forward"]))
+@Client.on_message(filters.private & filters.command(["fwd", "forward"]))
 async def run(bot, message):
     buttons = []
     btn_data = {}
     user_id = message.from_user.id
     _bot = await db.get_bot(user_id)
     if not _bot:
-      return await message.reply("<code>You didn't added any bot. Please add a bot using /settings !</code>")
+      return await message.reply("<code>__**You didn't added any bot. Please add a bot using /settings !**__</code>")
     channels = await db.get_user_channels(user_id)
     if not channels:
-       return await message.reply_text("please set a to channel in /settings before forwarding")
+       return await message.reply_text("Please set a to channel in /settings before forwarding")
     if len(channels) > 1:
        for channel in channels:
           buttons.append([KeyboardButton(f"{channel['title']}")])
@@ -51,7 +59,7 @@ async def run(bot, message):
         last_msg_id = int(match.group(5))
         if chat_id.isnumeric():
             chat_id  = int(("-100" + chat_id))
-    elif fromid.forward_from_chat.type in ['channel', 'supergroup']:
+    elif fromid.forward_from_chat.type in [enums.ChatType.CHANNEL]:
         last_msg_id = fromid.forward_from_message_id
         chat_id = fromid.forward_from_chat.username or fromid.forward_from_chat.id
         if last_msg_id == None:
@@ -85,3 +93,7 @@ async def run(bot, message):
         reply_markup=reply_markup
     )
     STS(forward_id).store(chat_id, toid, int(skipno.text), int(last_msg_id))
+    
+#Dont Remove My Credit @Silicon_Bot_Update 
+#This Repo Is By @Silicon_Official 
+# For Any Kind Of Error Ask Us In Support Group @Silicon_Botz 
