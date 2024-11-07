@@ -1,5 +1,14 @@
-git+https://github.com/yuvraj371/pyropatch
+pyrofork==2.3.45
 motor
 TgCrypto
 Dnspython
+aiohttp
+pytz
+psutil
 
+
+Flask==1.1.2
+gunicorn==20.1.0
+Jinja2==3.0.3
+werkzeug==2.0.2
+itsdangerous==2.0.1

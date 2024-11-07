@@ -1,7 +1,17 @@
+#Dont Remove My Credit @Silicon_Bot_Update 
+#This Repo Is By @Silicon_Official 
+# For Any Kind Of Error Ask Us In Support Group @Silicon_Botz 
+
 from os import environ 
 from config import Config
 import motor.motor_asyncio
- 
+from pymongo import MongoClient
+
+async def mongodb_version():
+    x = MongoClient(Config.DATABASE_URI)
+    mongodb_version = x.server_info()['version']
+    return mongodb_version
+
 class Database:
     
     def __init__(self, uri, database_name):
@@ -21,7 +31,11 @@ class Database:
                 ban_reason="",
             ),
         )
-      
+ 
+ #Dont Remove My Credit @Silicon_Bot_Update 
+#This Repo Is By @Silicon_Official 
+# For Any Kind Of Error Ask Us In Support Group @Silicon_Botz      
+                
     async def add_user(self, id, name):
         user = self.new_user(id, name)
         await self.col.insert_one(user)
@@ -34,6 +48,10 @@ class Database:
         bcount = await self.bot.count_documents({})
         count = await self.col.count_documents({})
         return count, bcount
+
+    async def total_channels(self):
+        count = await self.chl.count_documents({})
+        return count
     
     async def remove_ban(self, id):
         ban_status = dict(
@@ -105,7 +123,9 @@ class Database:
     async def add_bot(self, datas):
        if not await self.is_bot_exist(datas['user_id']):
           await self.bot.insert_one(datas)
-    
+#Dont Remove My Credit @Silicon_Bot_Update 
+#This Repo Is By @Silicon_Official 
+# For Any Kind Of Error Ask Us In Support Group @Silicon_Botz     
     async def remove_bot(self, user_id):
        await self.bot.delete_many({'user_id': int(user_id)})
       
@@ -157,5 +177,9 @@ class Database:
     
     async def get_all_frwd(self):
        return self.nfy.find({})
-     
+       
+ #Dont Remove My Credit @Silicon_Bot_Update 
+#This Repo Is By @Silicon_Official 
+# For Any Kind Of Error Ask Us In Support Group @Silicon_Botz 
+    
 db = Database(Config.DATABASE_URI, Config.DATABASE_NAME)

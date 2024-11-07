@@ -1,7 +1,10 @@
+#Dont Remove My Credit @Silicon_Bot_Update 
+#This Repo Is By @Silicon_Official 
+# For Any Kind Of Error Ask Us In Support Group @Silicon_Botz 
+
 {
   "name": "Auto-Forward-Bot-V2",
   "description": "Telegram's Best Smart Plugin File Forward Bot",
-  "logo": "https://telegra.ph/file/5c3499c3b2ec282cf0c4e.jpg",
   "stack": "container",
   "keywords": [
     "telegram",
@@ -10,25 +13,29 @@
     "forward",
     "bot"
   ],
-  "success_url": "https://t.me/DForDarkAngel",
-  "website": "https://github.com/SadKidBGMZ/fwdbot",
-  "repository": "https://github.com/SadKidBGMZ/fwdbot",
+  "success_url": "https://t.me/Silicon_Bot_Update",
+  "repository": "https://github.com/Silicon-Developer/Ultra-Forward-Bot",
   "env": {
     "API_ID": {
       "description": "Get this value from https://my.telegram.org or @UseTGSBot",
-      "required": true
+      "value": ""
     },
     "API_HASH": {
       "description": "Get this value from https://my.telegram.org or @UseTGSBot",
-      "required": true
+      "value": ""
     },
     "BOT_TOKEN": {
       "description": "Your bot token from @BotFather",
-      "required": true
+      "value": ""
+
+#Dont Remove My Credit @Silicon_Bot_Update 
+#This Repo Is By @Silicon_Official 
+# For Any Kind Of Error Ask Us In Support Group @Silicon_Botz 
+
     },
     "BOT_OWNER_ID": {
       "description": "Enter Your Telegram id",
-      "required": true
+      "value": ""
     },
     "BANNED_USERS": {
       "description": "If you want to add a caption to the forwarded file, enter it here",
@@ -36,11 +43,11 @@
     },
     "DATABASE_NAME": {
       "description": "Type Of filters (document , audio , photo , video , animation)",
-      "required": true
+      "value": "document"
     },
     "DATABASE_URI": {
-      "description": "Pyrogram string Seccion - https://replit.com/@JijinR/PyroSessionString?v=1",", 
-      "required": true
+      "description": "Your MongoDB Uri"
+      "value": ""
     }
   },
   "formation": {
@@ -50,3 +57,6 @@
     }
   }
 }
+#Dont Remove My Credit @Silicon_Bot_Update 
+#This Repo Is By @Silicon_Official 
+# For Any Kind Of Error Ask Us In Support Group @Silicon_Botz 
