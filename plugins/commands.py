@@ -21,7 +21,11 @@ main_buttons = [[
         InlineKeyboardButton('📜 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url='https://t.me/Infinity_XBotz_support'),
         InlineKeyboardButton('📢 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/Infinity_XBotz')
         ],[
-        InlineKeyboardButton('💳 ᴅᴏɴᴀᴛᴇ', callback_data='donate')
+        InlineKeyboardButton('💳 ᴅᴏɴᴀᴛᴇ', callback_data='donate'),
+        InlineKeyboardButton('😇Bot owner😇', url="https://t.me/Madhuri_niranjan")
+        ],[
+        InlineKeyboardButton('🎬 Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url='https://t.me/+Qn6fthcb7wI0ZTk1'),
+        InlineKeyboardButton('Movie Cʜᴀɴɴᴇʟ', url='https://t.me/+-qfrHvP10ko1ZDM1')
         ]]
 #===================Start Function===================#
 
